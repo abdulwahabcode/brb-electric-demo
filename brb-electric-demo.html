@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRB Electric LLC — Electrician in Greenville, SC</title>
+<meta name="description" content="BRB Electric LLC — licensed-quality electrical work in Greenville, SC. Panel upgrades, lighting, troubleshooting, EV chargers. Call (864) 775-0240.">
+<style>
+:root{
+  --ink:#121826;            /* tinted navy-black (60%) */
+  --ink-2:#1B2334;          /* alt dark */
+  --steel:#2C3A55;          /* 30% sections */
+  --steel-line:#3B4A6B;
+  --amber:#C99B3F;          /* 10% accent — electric amber, muted */
+  --amber-deep:#A87E2C;
+  --paper:#ECEFF4;          /* off-white text on dark */
+  --muted:#A9B4C7;
+  --body:#3B4356;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--ink);color:var(--paper);line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* hazard stripe utility */
+.hazard{height:10px;background:repeating-linear-gradient(45deg,var(--amber) 0 18px,var(--ink) 18px 36px)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(18,24,38,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--steel-line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:.06em}
+.brand .bolt{width:30px;height:30px;background:var(--amber);border-radius:6px;display:grid;place-items:center}
+.brand small{display:block;font-size:10px;letter-spacing:.28em;color:var(--muted);font-weight:600}
+.nav-links{display:none;gap:26px;font-size:14px;font-weight:600;letter-spacing:.04em}
+.nav-links a{text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--amber)}
+.nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#14100a;text-decoration:none;font-weight:800;font-size:14px;padding:12px 18px;border-radius:4px;min-height:44px}
+@media(min-width:760px){.nav-links{display:flex}}
+
+/* HERO — blueprint grid */
+.hero{position:relative;padding:84px 0 72px;background:
+  linear-gradient(rgba(44,58,85,.28) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(44,58,85,.28) 1px,transparent 1px),
+  radial-gradient(1100px 480px at 80% -10%,rgba(201,155,63,.14),transparent 60%),
+  var(--ink);
+  background-size:44px 44px,44px 44px,auto,auto;overflow:hidden}
+.kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:.32em;color:var(--amber);margin-bottom:18px}
+.hero h1{font-size:clamp(2.6rem,8vw,4.6rem);line-height:1.02;font-weight:900;letter-spacing:-.01em;text-transform:uppercase}
+.hero h1 .thin{display:block;color:transparent;-webkit-text-stroke:2px var(--amber);font-weight:800}
+.hero p.lead{max-width:560px;color:var(--muted);font-size:clamp(1rem,2.4vw,1.15rem);margin:20px 0 30px}
+.hero p.lead strong{color:var(--paper)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:4px;font-weight:800;font-size:16px;text-decoration:none;letter-spacing:.02em}
+.btn-amber{background:var(--amber);color:#14100a}
+.btn-amber:hover{background:#D9AE52}
+.btn-ghost{border:2px solid var(--steel-line);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+.hero-meta b{color:var(--amber)}
+
+/* TRUST BAR */
+.trust{background:var(--ink-2);border-top:1px solid var(--steel-line);border-bottom:1px solid var(--steel-line)}
+.trust-in{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.trust div{padding:22px 18px;border-left:1px solid var(--steel-line);font-size:13px;color:var(--muted)}
+.trust div:first-child{border-left:none}
+.trust b{display:block;color:var(--paper);font-size:15px;margin-bottom:2px}
+@media(min-width:760px){.trust-in{grid-template-columns:repeat(4,1fr)}}
+
+/* SECTIONS */
+section{padding:72px 0}
+.sec-label{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.32em;color:var(--amber);margin-bottom:12px}
+h2.sec-title{font-size:clamp(1.7rem,4.6vw,2.6rem);font-weight:900;text-transform:uppercase;letter-spacing:.01em;line-height:1.1;margin-bottom:14px}
+.sec-sub{color:var(--muted);max-width:620px;margin-bottom:36px}
+
+/* SERVICES — industrial cards */
+#services{background:var(--ink)}
+.svc-grid{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:640px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc{background:var(--ink-2);border:1px solid var(--steel-line);border-left:4px solid var(--amber);border-radius:6px;padding:26px 22px;transition:transform .2s}
+.svc:hover{transform:translateY(-4px)}
+.svc .ic{width:46px;height:46px;border-radius:6px;background:rgba(201,155,63,.14);display:grid;place-items:center;margin-bottom:16px}
+.svc h3{font-size:18px;margin-bottom:8px;letter-spacing:.02em}
+.svc p{font-size:14.5px;color:var(--muted)}
+
+/* WHY — numbered rows */
+#why{background:var(--steel)}
+.why-row{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid var(--steel-line);align-items:start}
+.why-row:last-child{border-bottom:none}
+.why-num{font-family:ui-monospace,Menlo,monospace;font-size:30px;font-weight:700;color:var(--amber)}
+.why-row h3{font-size:18px;margin-bottom:6px}
+.why-row p{color:#C6CFDE;font-size:15px;max-width:640px}
+
+/* AREA */
+#area{background:var(--ink)}
+.pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.pills span{border:1px solid var(--steel-line);border-radius:999px;padding:10px 20px;font-size:14px;font-weight:600;color:var(--muted)}
+.pills span.hub{background:var(--amber);border-color:var(--amber);color:#14100a;font-weight:800}
+
+/* CONTACT */
+#contact{background:var(--ink-2);border-top:1px solid var(--steel-line)}
+.contact-grid{display:grid;gap:16px;grid-template-columns:1fr;margin:34px 0}
+@media(min-width:760px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
+.c-card{background:var(--ink);border:1px solid var(--steel-line);border-radius:6px;padding:28px 24px;text-align:center}
+.c-card .ic{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:rgba(201,155,63,.14);display:grid;place-items:center}
+.c-card h3{font-size:13px;letter-spacing:.24em;color:var(--muted);margin-bottom:8px;font-weight:700}
+.c-card a.big{font-size:20px;font-weight:800;color:var(--paper);text-decoration:none;word-break:break-all}
+.c-card a.big:hover{color:var(--amber)}
+.c-card p{font-size:13px;color:var(--muted);margin-top:8px}
+
+footer{background:#0C1019;padding:30px 0 40px;font-size:13px;color:var(--muted)}
+.foot-in{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between}
+.foot-in a{color:var(--muted)}
+.demo-credit{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;letter-spacing:.08em}
+</style>
+</head>
+<body>
+
+<div class="hazard" aria-hidden="true"></div>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="BRB Electric LLC home">
+      <span class="bolt" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#14100a"/></svg>
+      </span>
+      <span>BRB ELECTRIC<small>GREENVILLE · SC</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#why">Why Us</a><a href="#area">Service Area</a><a href="#contact">Contact</a>
+    </div>
+    <a class="nav-call" href="tel:+18647750240">Call (864) 775-0240</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="kicker">// ELECTRICAL CONTRACTOR — GREENVILLE SC</p>
+    <h1>Power done right<span class="thin">the first time.</span></h1>
+    <p class="lead"><strong>BRB Electric LLC</strong> handles residential and light-commercial electrical work across Greenville — panel upgrades, lighting, troubleshooting, and EV chargers. Clean work, straight pricing, no runaround.</p>
+    <div class="cta-row">
+      <a class="btn btn-amber" href="tel:+18647750240">Call (864) 775-0240</a>
+      <a class="btn btn-ghost" href="mailto:brbelectric1@gmail.com">Email for a Quote</a>
+    </div>
+    <div class="hero-meta">
+      <span><b>▸</b> UP TO CODE, EVERY JOB</span>
+      <span><b>▸</b> UPFRONT PRICING</span>
+      <span><b>▸</b> RESIDENTIAL + LIGHT COMMERCIAL</span>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="wrap trust-in">
+    <div><b>Panel Upgrades</b>100–200 amp service swaps</div>
+    <div><b>Troubleshooting</b>Dead outlets, breakers, flicker</div>
+    <div><b>Lighting</b>Recessed, fans, outdoor security</div>
+    <div><b>EV Chargers</b>Home Level-2 installs</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="sec-label">// 01 — SERVICES</p>
+    <h2 class="sec-title">Full-scope electrical work</h2>
+    <p class="sec-sub">From a single dead outlet to a full panel replacement — one call covers it.</p>
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C99B3F" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>
+        <h3>Panel Upgrades &amp; Service</h3><p>Replace outdated fuse boxes and maxed-out panels with modern 100–200 amp service. Safer, room to grow, and ready for EVs and additions.</p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C99B3F" stroke-width="2"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.7 1 1.5 1 2.5h6c0-1 .2-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></div>
+        <h3>Lighting Installation</h3><p>Recessed cans, pendants, under-cabinet, landscape and security lighting — placed right, dimmed right, wired clean.</p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C99B3F" stroke-width="2"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+        <h3>Troubleshooting &amp; Repairs</h3><p>Breakers that trip, outlets that died, lights that flicker. We find the actual fault fast and fix it — not just the symptom.</p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C99B3F" stroke-width="2"><path d="M5 17h14M6 17l1.5-6h9L18 17M9 11V8h6v3"/><circle cx="8.5" cy="19" r="1.6"/><circle cx="15.5" cy="19" r="1.6"/></svg></div>
+        <h3>EV Charger Installation</h3><p>Dedicated Level-2 home charging circuits, load calculations included, so your panel handles it without surprises.</p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C99B3F" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+        <h3>New Construction &amp; Remodels</h3><p>Rough-in and finish wiring for additions, renovations, and new builds — coordinated with your GC, inspected clean.</p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C99B3F" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></div>
+        <h3>Ceiling Fans &amp; Fixtures</h3><p>Fan installs with proper bracing, smart switches, dimmers, and fixture swaps — small jobs done with the same care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <p class="sec-label">// 02 — WHY BRB</p>
+    <h2 class="sec-title">Built like a job site.<br>Run like a business.</h2>
+    <div style="margin-top:28px">
+      <div class="why-row"><span class="why-num">01</span><div><h3>Straight, upfront pricing</h3><p>You approve the price before work starts. No "we'll see once we're in the wall" surprises on the invoice.</p></div></div>
+      <div class="why-row"><span class="why-num">02</span><div><h3>Code-correct, every time</h3><p>Work that passes inspection the first time — proper grounding, AFCI/GFCI where required, labeled panels.</p></div></div>
+      <div class="why-row"><span class="why-num">03</span><div><h3>Clean in, clean out</h3><p>Drop cloths, vacuumed floors, and panels labeled when we leave. Your house shouldn't look like a job site after we go.</p></div></div>
+      <div class="why-row"><span class="why-num">04</span><div><h3>One call, real answers</h3><p>Talk to the person doing the work. Call or email — you'll get a straight answer, not a sales script.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <p class="sec-label">// 03 — SERVICE AREA</p>
+    <h2 class="sec-title">Serving the Upstate</h2>
+    <p class="sec-sub">Based in Greenville, on the road across the surrounding communities.</p>
+    <div class="pills">
+      <span class="hub">Greenville</span><span>Mauldin</span><span>Simpsonville</span><span>Greer</span><span>Taylors</span><span>Fountain Inn</span><span>Travelers Rest</span><span>Piedmont</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="sec-label">// 04 — CONTACT</p>
+    <h2 class="sec-title">Get it on the schedule</h2>
+    <p class="sec-sub">Call, email, or message — describe the job and we'll get you a price and a time.</p>
+    <div class="contact-grid">
+      <div class="c-card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C99B3F" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+        <h3>CALL</h3><a class="big" href="tel:+18647750240">(864) 775-0240</a><p>Fastest for urgent issues</p>
+      </div>
+      <div class="c-card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C99B3F" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
+        <h3>EMAIL</h3><a class="big" href="mailto:brbelectric1@gmail.com">brbelectric1@gmail.com</a><p>Send photos of the job</p>
+      </div>
+      <div class="c-card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="#C99B3F"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7h3z"/></svg></div>
+        <h3>FACEBOOK</h3><a class="big" href="https://www.facebook.com/61589206534812/" target="_blank" rel="noopener">BRB Electric LLC</a><p>Message us on Facebook</p>
+      </div>
+    </div>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-amber" href="tel:+18647750240">Call Now — (864) 775-0240</a>
+    </div>
+  </div>
+</section>
+
+<div class="hazard" aria-hidden="true"></div>
+<footer>
+  <div class="wrap foot-in">
+    <span>© 2026 BRB Electric LLC · Greenville, SC</span>
+    <span class="demo-credit">DEMO WEBSITE BY WAHAB CODES</span>
+  </div>
+</footer>
+
+</body>
+</html>
